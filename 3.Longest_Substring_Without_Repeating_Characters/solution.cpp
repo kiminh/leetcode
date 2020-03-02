@@ -31,5 +31,6 @@ int main() {
     Solution a;
     std::cout<<a.lengthOfLongestSubstring("abcabacbb")<<std::endl;
     std::cout<<a.lengthOfLongestSubstring("abba")<<std::endl;
+    std::cout<<a.lengthOfLongestSubstring("idavswxjxziezopvwnrgmsqndyjvsexahyyauxltwvxvlnshcmpqefdjdmhyqeaaeyczvnstksovfhehvuzzzclfqsdjwdjbelc")<<std::endl;
     return 0;
 }
