@@ -11,7 +11,8 @@ public:
             sign = true;
         }
         // std::numeric_limits<int>::max():2^31-1 2147483647
-        // std::numeric_limits<int>::min():-2^31  2147483648
+        // std::numeric_limits<int>::min():-2^31  -2147483648
+
         unsigned int result = 0;
         while(yax) {
             auto mod = yax % 10;
