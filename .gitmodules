@@ -1,0 +1,4 @@
+[submodule "alg"]
+	path = alg
+	url = https://github.com/galois-advertising/alg
+	branch = develop
