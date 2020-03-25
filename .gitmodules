@@ -2,3 +2,7 @@
 	path = alg
 	url = https://github.com/galois-advertising/alg
 	branch = develop
+[submodule "common"]
+	path = common
+	url = https://github.com/galois-advertising/common
+	branch = master
