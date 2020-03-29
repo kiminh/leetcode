@@ -1,0 +1,26 @@
+project(alg)
+cmake_minimum_required(VERSION 2.8)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb -std=c++17 -fno-strict-aliasing -Wno-register")
+set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall -std=c++17 -fno-strict-aliasing -Wno-register")
+set(CMAKE_BUILD_TYPE "Debug")
+include_directories("${PROJECT_SOURCE_DIR}/include")
+find_package(Boost REQUIRED COMPONENTS log)
+if(NOT Boost_FOUND)
+    message("Can not find Boost")
+endif()
+add_definitions(-DBOOST_SPIRIT_THREADSAFE)
+add_definitions(-DBOOST_ALL_DYN_LINK)
+add_definitions(-D_DEBUG)
+include_directories(${Boost_INCLUDE_DIRS})
+link_directories(${Boost_LIBRARY_DIRS})
+include_directories("${PROJECT_SOURCE_DIR}/common/util/include")
+include_directories("${PROJECT_SOURCE_DIR}/alg/include")
+set(SRCS
+"${PROJECT_SOURCE_DIR}/common/util/src/log.cpp" 
+)
+
+add_executable(94 ${SRCS} "${PROJECT_SOURCE_DIR}/94.Binary_Tree_Inorder_Traversal/solution.cpp")
+target_link_libraries(94 boost_log-mt)
