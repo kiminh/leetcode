@@ -43,5 +43,58 @@ insert and find strings in O(L) 要明显优于BST和Hash
 
 比较费内存，因为每个node都有一个长度为26的数组。
 
+# 二叉树
+
+二叉树的考点比较固定，主要有下面一些：
+* 创建树
+* 深度优先遍历
+* 广度优先遍历 && 按层遍历
+* 双树同时处理
+* 二叉搜索树BST
+
+在解决问题时，尽量寻找一下问题的答案是否有递归的性质，例如[101.Symmetric Tree](https://leetcode.com/problems/symmetric-tree)
+
+## 深度优先遍历
+
+这个经常用到，其中包括preorder、inorder和postorder三种遍历方法，每种遍历方法又分为递归遍历、循环遍历、和迭代器模式的遍历。
+最典型的有下面这些题目，都是直接考察这方面内容。
+
+* [94.Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal)
+* [144.Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)
+* [145.Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal)
+* [173.Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator)
+
+## 广度优先遍历
+
+广度优先遍历也叫按层遍历,[102.Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)这个题目是直接对按层遍历的考察。
+按层遍历，的很多题目，一般需要能够识别到每一层的第一个节点和最后一个节点，需要在这些时候做一些特别的记录或者操作才能解决问题。
+典型的问题有：
+
+[222.Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes)
+[116.Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node)
+[117.Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii)
+[199.Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
+其中222比较直接一些，二另外三道题则比较间接，但是依然是用了层序遍历的思想。
+
+## 双树同时处理
+
+
+
+# 哈希
+
+哈希思想也是算法中的一个重要思想。哈希的主要应用有2方面：提高性能和归类。
+
+通过构造特殊的哈希，可以快速收集相同类型的数据。典型的题目例如：
+
+* [49.Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+
+
+# 列表
+
+
+
+
+
+
 
 
