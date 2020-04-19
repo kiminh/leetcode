@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+using namespace std;
+class Solution {
+public:
+
+    void walk(vector<vector<int>>& result, 
+        const vector<int>& nums, std::unordered_map<int,int>& helper) {
+            for (auto i : nums) {
+                if (helper.find(i) == helper.end()) {
+                    helper.insert({i, 0});
+                    {
+                        result.push_back({});
+                        for (auto k : helper) {
+                            result.back().push_back(k.first);
+                        }
+                    }
+                    walk(result, nums, helper);
+                    helper.erase(i);
+                }
+            }
+    }
+    vector<vector<int>> subsets(const vector<int>& nums) {
+        vector<vector<int>> result;
+        result.push_back({});
+        std::unordered_map<int,int> helper;
+        walk(result, nums, helper);
+        return result;
+    }
+};
+
+int main() {
+    Solution s;
+    for (auto& vec : s.subsets({1,2,3})) {
+        for (auto& k : vec) {
+            std::cout<<k<<",";
+        }
+        std::cout<<std::endl;
+
+    }
+
+    return 0;
+}
