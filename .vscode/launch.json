@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "189",
+            "name": "474",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/189",
+            "program": "${workspaceFolder}/build/474",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -21,7 +21,7 @@
 			"type": "go",
 			"request": "launch",
 			"mode": "auto",
-			"program": "${workspaceFolder}/368.Largest_Divisible_Subset/",
+			"program": "${workspaceFolder}/42.Trapping_Rain_Water/",
 			"env": {},
 			"args": []
 		}
