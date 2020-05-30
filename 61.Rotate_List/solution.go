@@ -1,10 +1,11 @@
 package main
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import (
+	mylist "github.com/galois-advertising/leetcode/container/list"
+)
 
-func rotateRight(head *ListNode, k int) *ListNode {
-
+func rotateRight(head *mylist.ListNode, k int) *mylist.ListNode {
+	l := mylist.NewList(head)
+	mylist.Rotate(l, k)
+	return l.Head()
 }

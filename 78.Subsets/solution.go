@@ -4,7 +4,7 @@ import (
 	"math"
 )
 
-func subsets(nums []int) [][]int {
+func subsets_notok(nums []int) [][]int {
 	res := [][]int{}
 	for i := 0; i < int(math.Pow(2, float64(len(nums)))); i++ {
 		tres := []int{}
@@ -16,4 +16,16 @@ func subsets(nums []int) [][]int {
 		res = append(res, tres)
 	}
 	return res
+}
+
+func subsets(nums []int) [][]int {
+	result := [][]int{[]int{}}
+	for _, v := range nums {
+		temp := [][]int{}
+		for _, set := range result {
+			temp = append(temp, append([]int{v}, set...))
+		}
+		result = append(result, temp...)
+	}
+	return result
 }

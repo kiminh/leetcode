@@ -1,6 +1,6 @@
 package main
 
-func findLength(A []int, B []int) int {
+func findLength_1(A []int, B []int) int {
 	results := make([][]int, len(A))
 	for i, _ := range results {
 		results[i] = make([]int, len(B))
@@ -25,4 +25,11 @@ func findLength(A []int, B []int) int {
 	}
 	return max
 
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }

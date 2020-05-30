@@ -21,7 +21,7 @@
 			"type": "go",
 			"request": "launch",
 			"mode": "auto",
-			"program": "${workspaceFolder}/42.Trapping_Rain_Water/",
+			"program": "${workspaceFolder}/25.Reverse_Nodes_in_k-Group/",
 			"env": {},
 			"args": []
 		}

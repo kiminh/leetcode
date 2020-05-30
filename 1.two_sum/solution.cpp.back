@@ -30,7 +30,22 @@ public:
 };
 
 
+class Cpp {
+private:
+    static int s;
+public:
+    int & r;
+    const int a;
+    Cpp(int & rr, int aa) : r(rr), a(aa) {
+    }
+};
+int Cpp::s = 1;
 int main() {
+
+    int r = 1;
+    Cpp cpp(r, 2);
+    Cpp::s = 1;
+    std::cout<<cpp.r<<" "<<cpp.a<<std::endl;
     Solution s;
     vector<int> input{2, 7, 11, 15};
     for (auto & i : s.twoSum(input, 9)) {

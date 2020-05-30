@@ -71,8 +71,28 @@ func min(a, b int) int {
 	}
 	return b
 }
-
 func trap(height []int) int {
+	result := 0
+	if len(height) == 0 {
+		return 0
+	}
+	left_max_h := make([]int, len(height))
+	right_max_h := make([]int, len(height))
+	left_max_h[0] = 0
+	for i := 1; i < len(left_max_h); i++ {
+		left_max_h[i] = max(height[i-1], left_max_h[i-1])
+	}
+	right_max_h[len(right_max_h)-1] = 0
+	for i := len(right_max_h) - 1 - 1; i >= 0; i-- {
+		right_max_h[i] = max(height[i+1], right_max_h[i+1])
+	}
+	for i := 1; i < len(height)-1; i++ {
+		result += max(min(left_max_h[i], right_max_h[i])-height[i], 0)
+	}
+	return result
+}
+
+func trap_brute_force(height []int) int {
 	result := 0
 	for i := 1; i < len(height)-1; i++ {
 		left_max_h := 0
